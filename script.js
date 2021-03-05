@@ -28,7 +28,9 @@ let playerDeck, computerDeck, inRound, stop;
 document.addEventListener('click', () => {
     if(stop){
         startGame();
+        return;
     }
+
     if (inRound){
         cleanBeforeRound();
     } else {
@@ -73,21 +75,24 @@ function flipCards() {
     updateDeckCount();
 
     if(isRoundWinner(playerCard, computerCard)){
-        text.innerText = "Win";
+        text.innerText = "👉You Won this Round";
         playerDeck.push(playerCard);
         playerDeck.push(computerCard);
     } else if (isRoundWinner(computerCard, playerCard)){
-        text.innerText = "Lose";
+        text.innerText = "👉You Lose this Round";
         computerDeck.push(playerCard);
         computerDeck.push(computerCard);
     } else {
-        text.innerText = "Draw";
+        text.innerText = "👉It's a Draw";
         playerDeck.push(playerCard);
-        computerDeck.push(computerCard);
+        playerDeck.push(computerCard);
     }
 
     if(isGameoOver(playerDeck)){
-        text.innerText = "You Lose";
+        text.innerText = "👉You have Lost the Game";
+        stop = true;
+    } else if(isGameoOver(computerDeck)) {
+        text.innerText = "👉You have Won the Game";
         stop = true;
     }
 }

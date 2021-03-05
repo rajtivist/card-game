@@ -5,12 +5,13 @@
 body{
     margin: 0;
     display: grid;
-    grid-template-columns: repeat(2, 6rem);
-    grid-template-rows: 10rem 2rem 10rem;
+    grid-template-columns: repeat(2, 8rem);
+    grid-template-rows: 12rem 5rem 12rem;
     gap: .5rem;
     cursor: pointer;
     justify-content: center;
-    padding-top: 1px;
+    padding-top: 15px;
+    user-select: none;
 }
 
 .deck{
