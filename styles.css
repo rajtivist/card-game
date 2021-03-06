@@ -9,6 +9,7 @@ body{
     grid-template-rows: 12rem 5rem 12rem;
     gap: .5rem;
     cursor: pointer;
+    background-image: url(https://wallpaperaccess.com/full/1488047.jpg);
     justify-content: center;
     padding-top: 15px;
     user-select: none;
@@ -19,7 +20,7 @@ body{
     height: 100%;
     width: 100%;
     border: 2px solid brown;
-    display: felx;
+    display: flex;
     justify-content: center;
     align-items: center;
     font-size: 3rem;
@@ -39,6 +40,7 @@ body{
 .text{
     grid-column: span 2;
     display: flex;
+    color: yellow;
     justify-content: center;
     align-items: center;
 }
@@ -47,6 +49,7 @@ body{
 position: relative;
 height: 100%;
 width: 100%;
+background-color: white;
 border: 2px solid brown;
 border-radius: .5rem;
 display: flex;
